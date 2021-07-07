@@ -1,0 +1,6 @@
+---
+
+pg_version: 13
+pg_user: postgres
+pg_pass: password
+pg_port: 5432
