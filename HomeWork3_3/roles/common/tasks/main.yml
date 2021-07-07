@@ -1,0 +1,29 @@
+---
+
+- name: Install default packages to Debian os family
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - iotop
+    - htop
+    - net-tools
+    - libpq-dev
+    - python-dev
+    - python2
+    - python3-pip
+  when: ansible_os_family == 'Debian'
+
+- name: Install default packages to RedHat os family
+  yum:
+    name: "{{ item }}"
+    update_cache: yes
+  with_items:
+    - iotop
+    - htop
+    - net-tools
+    - python-dev
+    - libpq-dev
+    - python2
+    - python3-pip
+  when: ansible_os_family == 'RedHat'
