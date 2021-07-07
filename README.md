@@ -43,3 +43,8 @@ Humidity: 65 %
 ## HomeWork 4. Описать контейнер для запуска nginx
  
  После запуска контейнера можно открыть страницу с текстом "DevOps Course"
+
+### Решение
+ Команды для запуска Docker контейнера
+ - docker build -t devops_course_nginx:latest .
+ - docker run -d -p 8080:80 --name nginx_devops -t devops_course_nginx:latest
